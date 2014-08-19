@@ -26,7 +26,7 @@ class Faced(object):
         img = self.opencv_image_from_stream(img_stream)
         if img is None:
             return False
-        rects = cascade.detectMultiScale(img, 1.2, 4, cv2.cv.CV_HAAR_SCALE_IMAGE, (20,20))
+        rects = self.cascade.detectMultiScale(img, 1.2, 4, cv2.cv.CV_HAAR_SCALE_IMAGE, (20,20))
         return len(rects)
 
 

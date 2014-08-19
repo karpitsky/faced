@@ -43,8 +43,7 @@ class DetectView(MethodView):
         return jsonify({'count': count}), 200
 
 
-bp = Blueprint('faced', __name__, url_prefix='/')
-bp.add_url_rule('/detect', view_func=DetectView.as_view('detect'))
+app.add_url_rule('/detect', view_func=DetectView.as_view('detect'))
 
 
 if __name__ == '__main__':
